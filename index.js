@@ -9,10 +9,14 @@ function scoreCalculator(arr) {
   }
 
   arr.forEach((elem) => {
-    if (elem < 5) {
+    if (elem < 5 && elem > 0) {
       score += 10;
     } else if (elem >= 5 && elem <= 10) {
       score += 5;
+    }
+
+    if (arr.every((elem) => elem < 5)) {
+      score += 100;
     }
   });
 
