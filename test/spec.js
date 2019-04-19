@@ -20,7 +20,7 @@ describe('Darts Score Calculator', function() {
   });
 
   it('if all radiuses are less than 5, award 100 bonus points!', function() {
-    scoreThrows([1, 1, 1]).should.equal(330);
+    scoreThrows([1, 1, 1]).should.equal(130);
   });
 
   it('should accept a collection of scores of any length', function() {

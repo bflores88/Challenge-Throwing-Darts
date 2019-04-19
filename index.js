@@ -6,6 +6,7 @@ function scoreCalculator(arr) {
 
   if (arr.length === 0) {
     score = -1;
+    return score;
   }
 
   arr.forEach((elem) => {
@@ -14,11 +15,11 @@ function scoreCalculator(arr) {
     } else if (elem >= 5 && elem <= 10) {
       score += 5;
     }
-
-    if (arr.every((elem) => elem < 5)) {
-      score += 100;
-    }
   });
+
+  if (arr.every((elem) => elem < 5)) {
+    score += 100;
+  }
 
   return score;
 }
